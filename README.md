@@ -1,0 +1,2 @@
+# ForLeetcode
+Leetcode记录
