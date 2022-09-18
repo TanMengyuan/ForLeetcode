@@ -1,5 +1,7 @@
 package p474;
 
+import classes.AssetUtil;
+
 /**
  * @author mengyuantan
  * @date 2022/9/18 19:45
@@ -44,16 +46,14 @@ public class FindMaxForm {
         String[] input1 = new String[] {"10", "0001", "111001", "1", "0"};
         int m1 = 5;
         int n1 = 3;
-
         int output1 = 4;
-        assert Solution.findMaxForm(input1, m1, n1) == output1;
+        AssetUtil.assertEqual(Solution.findMaxForm(input1, m1, n1), output1);
 
         String[] input2 = new String[] {"10", "0", "1"};
         int m2 = 1;
         int n2 = 1;
-
-        int output2 = 4;
-        assert Solution.findMaxForm(input2, m2, n2) == output2;
+        int output2 = 2;
+        AssetUtil.assertEqual(Solution.findMaxForm(input2, m2, n2), output2);
 
         System.out.println("done");
     }

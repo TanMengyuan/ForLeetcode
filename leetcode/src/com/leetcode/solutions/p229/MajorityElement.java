@@ -1,5 +1,7 @@
 package p229;
 
+import classes.AssetUtil;
+
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -31,18 +33,15 @@ public class MajorityElement {
     public static void main(String[] args) {
         int[] input1 = new int[]{3, 2, 3};
         List<Integer> output1 = Collections.singletonList(3);
-
-        assert Objects.equals(Solution.majorityElement(input1), output1);
+        AssetUtil.assertEqual(Solution.majorityElement(input1), output1);
 
         int[] input2 = new int[]{1};
         List<Integer> output2 = Collections.singletonList(1);
+        AssetUtil.assertEqual(Solution.majorityElement(input2), output2);
 
-        assert Objects.equals(Solution.majorityElement(input2), output2);
-
-        int[] input3 = new int[]{1, 1};
-        List<Integer> output3 = Arrays.asList(1, 2);
-
-        assert Objects.equals(Solution.majorityElement(input3), output3);
+        int[] input3 = new int[]{1, 2};
+        List<Integer> output3 = Arrays.asList(2, 1);
+        AssetUtil.assertEqual(Solution.majorityElement(input3), output3);
 
         System.out.println("done");
     }
