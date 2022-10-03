@@ -21,10 +21,27 @@ public class ListNode {
 
     public static void printList(ListNode head) {
         ListNode temp = head;
-        System.out.println();
         while (temp != null) {
             System.out.print(temp.val() + "\t");
             temp = temp.next;
         }
+        System.out.println();
+    }
+
+    public static ListNode arrayToListNode(int[] nums) {
+        if (nums.length < 1) {
+            return null;
+        }
+
+        ListNode head = new ListNode(nums[0]);
+        ListNode last = head;
+
+        for (int i = 1; i < nums.length; i ++) {
+            ListNode cur = new ListNode(nums[i]);
+            last.next = cur;
+            last = cur;
+        }
+
+        return head;
     }
 }

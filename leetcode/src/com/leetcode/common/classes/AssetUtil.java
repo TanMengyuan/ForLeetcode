@@ -14,9 +14,9 @@ public class AssetUtil {
         }
     }
 
-    public static void assertEqual(Object obj1, Object obj2) {
-        if (!Objects.equals(obj1, obj2)) {
-            throw new RuntimeException(String.format("except: %s, but find: %s", obj2, obj1));
+    public static void assertEqual(Object actualResult, Object exceptResult) {
+        if (!Objects.equals(actualResult, exceptResult)) {
+            throw new RuntimeException(String.format("except: %s, but find: %s", exceptResult, actualResult));
         }
     }
 }
