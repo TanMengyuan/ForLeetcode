@@ -15,8 +15,11 @@ public class AssetUtil {
     }
 
     public static void assertEqual(Object actualResult, Object exceptResult) {
-        if (!Objects.equals(actualResult, exceptResult)) {
-            throw new RuntimeException(String.format("except: %s, but find: %s", exceptResult, actualResult));
+        if (Objects.equals(actualResult, exceptResult)) {
+            System.out.println("asset success");
+            return;
         }
+
+        throw new RuntimeException(String.format("except: %s, but find: %s", exceptResult, actualResult));
     }
 }
